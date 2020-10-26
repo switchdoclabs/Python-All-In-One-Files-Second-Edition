@@ -289,7 +289,7 @@ look_right_max = 0
 look_left_max  = 100
 
 #motor speed variables - these may have to be tweaked depending on what kind of floor 
-# on wich you are operating your robot.
+# on which you are operating your robot.
 
 motor_speed = 100
 motor_duration = 0.40 # normal approach target duration
