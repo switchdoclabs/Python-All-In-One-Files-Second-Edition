@@ -11,8 +11,9 @@ QUERY = """
         LIMIT 1000
         """
 
+#client = bigquery.Client()
 client = bigquery.Client.from_service_account_json(
-                    'MedicareProject2-1223283ef413.json')
+                    'tidy-groove-229321-7751e28585fc.json')
 query_job = client.query(QUERY)
 df = query_job.to_dataframe()
 
