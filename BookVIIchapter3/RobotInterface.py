@@ -163,7 +163,7 @@ class RobotInterface(object):
 
         def headTurnPercent(self, percent):
 
-            adder = (calValues.look_left_max - calValues.look_right_max)*(percent/100.0)
+            adder = calValues.look_left_max + (calValues.look_left_max - calValues.look_right_max)*(percent/100.0)
             pwm.set_pwm(self.HEAD_TURN_SERVO, 0, int(calValues.look_left_max - adder))
             time.sleep(0.05)
             
@@ -184,7 +184,7 @@ class RobotInterface(object):
             time.sleep(0.05)
 
         def headTiltPercent(self,percent):
-            adder = (calValues.look_down_max - calValues.look_up_max)*(percent/100.0)
+            adder = calValues.look_down_max +(calValues.look_down_max - calValues.look_up_max)*(percent/100.0)
             pwm.set_pwm(self.HEAD_TILT_SERVO, 0, int(calValues.look_down_max - adder))
             time.sleep(0.05)
 
@@ -206,7 +206,7 @@ class RobotInterface(object):
 
 
         def wheelsPercent(self,percent):
-            adder = (calValues.turn_left_max - calValues.turn_right_max)*(percent/100.0)
+            adder = calValues.turn_left_max + (calValues.turn_left_max - calValues.turn_right_max)*(percent/100.0)
             pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, int(calValues.turn_right_max + adder))
             time.sleep(0.05)
 

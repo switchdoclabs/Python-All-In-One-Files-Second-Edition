@@ -51,8 +51,7 @@ try:
             if (DEBUG):
                 print("distance too far ={:6.2f}cm"
                         .format(current_distance))
-        else:
-            if (current_distance <= 10.0):
+        elif (current_distance <= 10.0):
                 # reset moveCount
                 # the Robot is close enough 
                 bothFrontLEDSOn("GREEN")
@@ -64,7 +63,7 @@ try:
                 time.sleep(5.0)
                 # back up and do it again
                 RI.motorBackward(100,1.0)
-            else:
+        else:
                 if (DEBUG):
                     print("moving forward ={:6.2f}cm"
                             .format(current_distance))
@@ -84,4 +83,4 @@ except KeyboardInterrupt:
 
 print ("program finished")
 
-
+xxx
